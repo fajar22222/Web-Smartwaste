@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/api/*"
+  to = "https://smartwaste.gamer.free/smartwaste_API/:splat"
+  status = 200
+  force = true

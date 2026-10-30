@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Arahkan permintaan API ke backend PHP
+RewriteRule ^api/(.*)$ smartwaste_API/$1 [L,QSA]
+
+# Biarkan file dan folder yang benar-benar tersedia diakses langsung
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Arahkan halaman frontend React ke index.html
+RewriteRule ^ index.html [L]
